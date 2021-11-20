@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "__config": "c",
+        "__locale": "c",
+        "chrono": "c",
+        "ctime": "c",
+        "iterator": "c",
+        "locale": "c",
+        "algorithm": "c",
+        "complex": "c",
+        "ios": "c",
+        "istream": "c",
+        "ostream": "c",
+        "__mutex_base": "c",
+        "cstdio": "c",
+        "cwchar": "c",
+        "type_traits": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "__tuple": "c",
+        "atomic": "c",
+        "memory": "c"
+    }
+}

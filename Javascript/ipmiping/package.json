@@ -1,0 +1,29 @@
+{
+    "name": "ipmiping",
+    "version": "1.0.0",
+    "authors": [
+        "bobbae"
+    ],
+    "description": "IPMI ping using RMCP",
+    "keywords": [
+        "ipmi","ping"
+    ],
+    "homepage": "http://github.com/bobbae/ipmiping",
+    "engines": {
+        "node": ">=0.6.0"
+    },
+    "dependencies": {
+        "minimist": "*"
+    },
+    "devDependencies": {
+    },
+    "scripts": {
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/bobbae/ipmiping.git"
+    },
+    "bugs": {
+        "url": "http://github.com/bobbae/ipmiping/issues"
+    }
+}

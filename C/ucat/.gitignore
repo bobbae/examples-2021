@@ -1,0 +1,9 @@
+a.out
+*.o
+*~
+ucat
+*.dSYM
+testfile*
+*.iso
+*.log
+*.exe

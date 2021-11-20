@@ -1,0 +1,22 @@
+FROM bobbae/grpcbuild 
+WORKDIR /go/src/github.com/bobbae/slackgist
+COPY . .
+ENV CGO_ENABLED=0
+ENV GOPATH=/go
+ENV GOROOT=/usr/local/go
+ENV PATH=/go/bin:/usr/local/go/bin:${PATH}
+RUN echo building in `pwd`
+RUN go clean -v ./...
+RUN go get -v ./...
+RUN go install -v ./...; cp /go/bin/slackgist /usr/local/bin; chmod +x /usr/local/bin/slackgist
+RUN file /usr/local/bin/slackgist
+ADD ./.gitconfig /root/.gitconfig
+ADD ./entrypoint.sh /usr/local/bin
+RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN apt-get update && apt-get install -y apt-transport-https curl unzip
+RUN apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+RUN apt-get update && apt-get install -y docker-ce
+ENTRYPOINT [ "entrypoint.sh" ]
+CMD []

@@ -1,0 +1,500 @@
+  286  mv misc todna .
+  287  mv misc/todna/ .
+  288  mv todna dnacodec
+  289  cd dnacodec
+  290  ls
+  291  go build
+  292  go install ./...
+  293  ls ~/bin/dnacodec 
+  294  pushd
+  295  ll
+  296  for i in zzz*.b64; do dnacodec -encode -inputfile $i -outputfile $i.dna; done
+  297  ll
+  298  ll
+  299  python
+  300  more *dna
+  301  pushd
+  302  less ../art/art_bin_MountRainier/art_illumina_README.txt 
+  303  less ../art/art_bin_MountRainier/art_illumina_README.txt 
+  304  pushd
+  305  ls
+  306  rm zzz.*
+  307  zfec -h
+  308  ll
+  309  split -b 150 zzz
+  310  ll
+  311  for i in x* ; do base64 $i > $I.b64; done
+  312  ll
+  313  rm .b64
+  314  for i in x* ; do base64 $i > $i.b64; done
+  315  ll
+  316  for i in *.b64; do md5sum $i | awk '{print $1}' > $i.b64.sum; done
+  317  ll
+  318  rm *.sum
+  319  for i in *.b64; do md5sum $i | awk '{print $1}' >> $i.b64; done
+  320  ll
+  321  rm *b64.b64
+  322  for i in *.b64; do md5sum $i | awk '{print $1}' >> $i; done
+  323  ll
+  324  more *b64
+  325  for i in *.b64; do dnacode -encode -inputfile$i -outputfile $i.dna; done
+  326  for i in *.b64; do dnacodec -encode -inputfile$i -outputfile $i.dna; done
+  327  for i in *.b64; do dnacodec -encode -inputfil e$i -outputfile $i.dna; done
+  328  ls
+  329  for i in *.b64; do dnacode -encode -inputfile $i -outputfile $i.dna; done
+  330  for i in *.b64; do dnacodec -encode -inputfile $i -outputfile $i.dna; done
+  331  ll
+  332  rm x*
+  333  split -b 150 zzz
+  334  ll
+  335  for i in x*; do zfec $i; done
+  336  ll
+  337  for i in  *fec; do base64 $i > $i.b64; done
+  338  ll
+  339  for i in *.b64; do md5sum $i | awk '{print $1}' >> $i; done
+  340  ll
+  341  ssh credo.io
+  342  ll
+  343  for i in *.b64; do dnacode -encode -inputfile $i -outputfile $i.dna ; done
+  344  for i in *.b64; do dnacodec -encode -inputfile $i -outputfile $i.dna ; done
+  345  ll
+  346  tail *.b64
+  347  ll
+  348  more *dna
+  349  for i in *.dna; do echo '> ' $i >> zzz.fasta; cat $i >> zzz.fasta; done
+  350  less zzz.fasta
+  351  less zzz.fasta
+  352  for i in *.dna; do echo '> ' $i >> zzz.fasta; cat $i >> zzz.fasta; echo >> zzz.fasta;  done
+  353  less zzz.fasta
+  354  rm zzz.fasta
+  355  for i in *.dna; do echo '> ' $i >> zzz.fasta; cat $i >> zzz.fasta; echo >> zzz.fasta;  done
+  356  less zzz.fasta
+  357  rm zzz.fasta
+  358  for i in *.dna; do echo '>' $i >> zzz.fasta; cat $i >> zzz.fasta; echo >> zzz.fasta;  done
+  359  rm zzz.fasta
+  360  for i in *.dna; do echo '>' $i >> zzz.fasta; cat $i >> zzz.fasta; echo >> zzz.fasta;  done
+  361  less zzz.fasta
+  362  wc -l *dna
+  363  wc *dna
+  364  ll *dna
+  365  cat *dna
+  366  ls
+  367  cat xab.7_8.fec.b64.dna
+  368  python
+  369  ll
+  370  cd wgsim
+  371  cd dna
+  372  cd wgsim
+  373  ls
+  374  cat *sh
+  375  ./wgsim -e -d 424 -s 0 -1 150 -2 150 -r 0 -R 0  -X 0 /tmp/zzz.fasta out1.fq out2.fq
+  376  ll
+  377  rm *fq *fastq
+  378  ls
+  379  history|grep wgsim
+  380  ./wgsim -e 0 -s 0 -r 0 -R 0 -X 0 -A 0 -d 424 -1 250 -2 250  /tmp/zzz.fasta
+  381  ls /tmp
+  382  ./wgsim -e 0 -s 0 -r 0 -R 0 -X 0 -A 0 -d 424 -1 250 -2 250  /tmp/zzz.fasta out1.fq out2.fq
+  383  ll
+  384  rm *fq
+  385  more /tmp/zzz.fastq
+  386  more /tmp/zzz.fasta
+  387  cd /tmp
+  388  history
+  389  ls
+  390  cat zzz.fasta
+  391  for i in *.dna; do echo '>' $i >> zzz.fasta; cat $i >> zzz.fasta; echo >> zzz.fasta;  done
+  392  ll
+  393  less zzz.fasta
+  394  pushd
+  395  dirs
+  396  cd  dna
+  397  cd wgsim
+  398  ./wgsim -e 0 -s 0 -r 0 -R 0 -X 0 -A 0 -d 424 -1 250 -2 250  /tmp/zzz.fasta out1.fq out2.fq
+  399  ll
+  400  pear -f out1.fq -r out2.fq -o all.fq
+  401  ll
+  402  less *assembled.fastq
+  403  cat > /tmp/y
+  404  dnacode -decode -inputfile /tmp/y -outputfile /tmp/y.decoded
+  405  dnacodec -decode -inputfile /tmp/y -outputfile /tmp/y.decoded
+  406  ll /tmp/y
+  407  ll /tmp
+  408  less *assembled.fastq
+  409  less *assembled.fastq
+  410  cat > /tmp/y
+  411  vi /tmp/y
+  412  dnacodec -decode -inputfile /tmp/y -outputfile /tmp/y.decoded
+  413  less /tmp/y.decoded
+  414  pwd
+  415  ls
+  416  cat *sh
+  417  awk '(NR % 4 == 2 && length($0) == 424) { print $0 } ' *assembled.fastq > out.good
+  418  more out.good
+  419  cat > /tmp/y
+  420  dnacodec -decode -inputfile /tmp/y -outputfile /tmp/y.decoded
+  421  more /tmp/y.decoded
+  422  dnacodec -decode -inputfile /tmp/xab.5_8.fec.b64.dna -outputfile /tmp/y.out
+  423  more /tmp/y.out
+  424  cat /tmp/y
+  425  cat /tmp/xab.5_8.fec.b64.dna 
+  426  vi /tmp/y
+  427  cat /tmp/y
+  428  vi /tmp/y
+  429  cat /tmp/y
+  430  ll /tmp/y
+  431  dnacodec -decode -inputfile /tmp/y -outputfile /tmp/y.decoded
+  432  vi /home/bob/src/gitlab.com/bobbae/dna/dnacodec/main.go
+  433  go install /home/bob/src/gitlab.com/bobbae/dna/dnacodec/main.go
+  434  cd /home/bob/src/gitlab.com/bobbae/dna/dnacodec/
+  435  go install
+  436  cd 
+  437  cd -
+  438  cd dna
+  439  cd wgsim
+  440  cd /home/bob/src/gitlab.com/bobbae/dna/dnacodec/
+  441  cd -
+  442  dnacodec -decode -inputfile /tmp/y -outputfile /tmp/y.decoded
+  443  more /tmp/y.decoded
+  444  grep 77d7861b6004c8ce7578b2761b099477 *
+  445  grep 77d7861b6004c8ce7578b2761b099477 /tmp/*
+  446  vi /home/bob/src/gitlab.com/bobbae/dna/dnacodec/main.go
+  447  python
+  448  fg
+  449  jobs
+  450  kill %1
+  451  jobs
+  452  vi /home/bob/src/gitlab.com/bobbae/dna/dnacodec/main.go
+  453  grep 77d7861b6004c8ce7578b2761b099477 /tmp/*
+  454  cat /tmp/y.decoded 
+  455  vi /tmp/y.decoded
+  456  echo B0AxMjcuMC4wLjEJbG9jYWxob3N0CjEyNy4wLjEuMQl2Ym94LXVidW50dS0xNi4wNAl2Yg== | base64 -d
+  457  echo B0AxMjcuMC4wLjEJbG9jYWxob3N0CjEyNy4wLjEuMQl2Ym94LXVidW50dS0xNi4wNAl2Yg== | base64 -d > /tmp/k
+  458  cat /tmp/k
+  459  md5sum /tmp/k
+  460  cat /tmp/xaa.0_8.fec.b64
+  461  cat /tmp/xaa.0_8.fec
+  462  md5sum /tmp/xaa.0_8.fec
+  463  md5sum /tmp/k
+  464  cat /tmp/k
+  465  md5sum
+  466  pwd
+  467  jobs
+  468  pwd
+  469  jobs
+  470  history
+  471  more /tmp/y
+  472  ll /tmp/y
+  473  vi /tmp/y
+  474  python
+  475  vi /tmp/y
+  476  python
+  477  cd dna
+  478  cd wgsim
+  479  wgsim -h
+  480  ./wgsim -h
+  481  ll
+  482  less *fastq
+  483  head *fastq
+  484  python
+  485  ll /tmp
+  486  perl
+  487  ls
+  488  ls
+  489  ls
+  490  pwd
+  491  jobs
+  492  cat /etc/hosts
+  493  ssh 37.50.143.121
+  494  ssh 37.50.143.101
+  495  jobs
+  496  tmux a
+  497  tmux a
+  498  ls
+  499  ls
+  500  ls
+  501  ls
+  502  ll
+  503  cd /tmp
+  504  ll
+  505  pwd
+  506  jobs
+  507  pwd
+  508  cd dna/art
+  509  cd art_bin_MountRainier/
+  510  history|grep art_il
+  511  ls /tmp
+  512  ll /tmp
+  513  more art_illumina_README.txt 
+  514  ll /tmp
+  515  ./art_illumina -ss MSv3 -i /tmp/zzz.fasta -o ./paired_end -l 150  -m 424 -p  -f 100 -s 1 
+  516  ll
+  517  rm paired*
+  518  ./art_illumina -ss MSv3 -i /tmp/zzz.fasta -o ./paired_end -l 150  -m 424 -p  -f 100 -s 1 
+  519  ll
+  520  less *fq
+  521  pear -f paired_end1.fq -r paired_end2.fq -o all.fq
+  522  ll
+  523  more all.fq.assembled.fastq 
+  524  ll /tmp
+  525  ll
+  526  awk '(NR % 4 == 2 && length($0) == 424) { print $0 } ' *assembled.fastq > out.good
+  527  ll
+  528  less *assembled.fastq
+  529  ./art_illumina -ss MSv3 -i /tmp/zzz.fasta -o ./paired_end -l 250  -m 424 -p  -f 100 -s 1 
+  530  ll
+  531  pear -f paired_end1.fq -r paired_end2.fq -o all.fq
+  532  ll
+  533  awk '(NR % 4 == 2 && length($0) == 424) { print $0 } ' *assembled.fastq > out.good
+  534  ll
+  535  less out.good 
+  536  head out.good
+  537  cat > /tmp/y
+  538  dnacodec -decode -inputfile /tmp/y -outputfile /tmp/y.decoded
+  539  less /tmp/y.decoded
+  540  more /tmp/y.decoded
+  541  head out.good
+  542  more out.good
+  543  ls
+  544  ll
+  545  more out.good
+  546  less out.good
+  547  ls
+  548  awk '(NR % 4 == 2 && length($0) == 424) { print $0 } ' *assembled.fastq > out.good
+  549  more out.good
+  550  awk '(NR % 4 == 2 && length($0) == 424) { print $0,"\n" } ' *assembled.fastq > out.good
+  551  more out.good
+  552  awk '(NR % 4 == 2 && length($0) == 424) { print $0 } ' *assembled.fastq > out.good
+  553  cat > /tmp/y
+  554  vi /tmp/y
+  555  vi /tmp/y
+  556  dnacodec -decode -inputfile /tmp/y -outputfile /tmp/y.decoded
+  557  more /tmp/y.decoded
+  558  base64
+  559  base64 -d
+  560  ls
+  561  pwd
+  562  jobs
+  563  vi out.good 
+  564  wc -l out.good
+  565  wc -l /tmp/zzz
+  566  wc -l /tmp/zzz.fasta 
+  567  ll /tmp
+  568  ls
+  569  more out.good 
+  570  cd slackgist
+  571  cd bobbae
+  572  ls
+  573  go get gitlab.com/bobbae/slackgist
+  574  sudo dhclient enp0s3
+  575  sudo dhclient enp0s8
+  576  go get gitlab.com/bobbae/slackgist
+  577  ping google.com
+  578  go get gitlab.com/bobbae/slackgist
+  579  ls
+  580  cd dna
+  581  git diff
+  582  ls
+  583  cd ..
+  584  ls
+  585  git clone https://gitlab.com/bobbae/slackgist
+  586  ls
+  587  rm -rf slackgist
+  588  git clone https://gitlab.com/bobbae/slackgist
+  589  cd slackgist
+  590  ls
+  591  vi main.go
+  592  cd dna
+  593  ls
+  594  cd dnacodec
+  595  ls
+  596  vi main.go
+  597  ls
+  598  cd ..
+  599  ls
+  600  vi dnacodec/main.go ../slackgist/main.go 
+  601  vi receive.py
+  602  ls */*py
+  603  ls
+  604  ls
+  605  ls
+  606  cd dnacodec
+  607  ls
+  608  vi main.go
+  609  godoc strings.Split
+  610  godoc strings
+  611  godoc strings|more
+  612  fg
+  613  go install
+  614  cd ../art/art_bin_MountRainier/
+  615  ls
+  616  dnacodec -receive -inputfile out.good -outputfile out.xxx
+  617  pushd ../../dnacodec/
+  618  vi main.go
+  619  go install
+  620  pushd
+  621  dnacodec -receive -inputfile out.good -outputfile out.xxx
+  622  pushd
+  623  vi main.go
+  624  go install
+  625  pushd
+  626  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug
+  627  pushd
+  628  fg
+  629  go install
+  630  pushd
+  631  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug
+  632  pwd
+  633  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug>/tmp/ll
+  634  less /tmp/ll
+  635  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug 2>/tmp/ll
+  636  less /tmp/ll
+  637  fg
+  638  go install
+  639  pushd
+  640  go install
+  641  pushd
+  642  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug 2>/tmp/ll
+  643  less /tmp/ll
+  644  less out.xxx
+  645  ll /tmp
+  646  cd ../../wgsim/
+  647  ls
+  648  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug 
+  649  dnacodec -receive -inputfile out.good -outputfile out.xxx 
+  650  dnacodec -receive -inputfile out.good -outputfile out.xxx 2>/tmp/ll
+  651  less out.xxx
+  652  less out.good
+  653  fg
+  654  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug 2>/tmp/ll
+  655  less /tmp/ll
+  656  ll /tmp
+  657  less /tmp/zzz.fasta
+  658  ./wgsim -e 0 -s 0 -r 0 -R 0 -X 0 -A 0 -d 424 -1 250 -2 250  /tmp/zzz.fasta out1.fq out2.fq
+  659  ll
+  660  less *assm*
+  661  less *assem*
+  662  ll /tmp
+  663  awk '(NR % 4 == 2 && length($0) == 424) { print $0 } ' *assembled.fastq > out.good
+  664  less out.good
+  665  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug 2>/tmp/ll
+  666  less /tmp/ll
+  667  more out.good
+  668  python
+  669  pushd
+  670  jobs
+  671  vi main.go
+  672  make install
+  673  go install
+  674  pushd
+  675  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug 2>/tmp/ll
+  676  less out.xxx
+  677  fg
+  678  jobs
+  679  pushd
+  680  vi main.go
+  681  go install
+  682  pushd
+  683  dnacodec -receive -inputfile out.good -outputfile out.xxx -debug 2>/tmp/ll
+  684  less /tmp/ll
+  685  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  686  rm /tmp/ll
+  687  pushd
+  688  vi main.go
+  689  go install
+  690  pushd
+  691  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  692  less /tmp/ll
+  693* 
+  694  pushd
+  695  vi main.go
+  696  more /tmp/ll
+  697  more /tmp/ll
+  698  pushd
+  699  more out.good
+  700  ls
+  701  more out.good
+  702  vi /tmp/ll
+  703  cat -n out.good |less
+  704  vi /tmp/ll
+  705  fg
+  706  go build
+  707  pushd
+  708  go build
+  709  pushd
+  710  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  711  vi /tmp/ll
+  712  rm /tmp/ll
+  713  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  714  vi /tmp/ll
+  715  pushd
+  716  go install
+  717  vi main.go
+  718  go install
+  719  pushd
+  720  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  721  vi main.go
+  722  vi /tmp/ll
+  723  pushd
+  724  vi /tmp/ll
+  725  vi main.go 
+  726  go install
+  727  pushd
+  728  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  729  more out.xxx
+  730  vi main.go 
+  731  vi /tmp/ll
+  732  pushd
+  733  vi /tmp/ll
+  734  vi main.go
+  735  go install
+  736  pushd
+  737  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  738  vi /tmp/ll
+  739  md5sum
+  740  vi /tmp/ll
+  741  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  742  vi /tmp/ll
+  743  dnacodec -receive -input out.good -output out.xxx -debug 2>/tmp/ll
+  744  vi /tmp/ll
+  745* 
+  746  vi /tmp/ll
+  747  dnacodec -receive -input out.good -output out.xxx 
+  748  man uniq
+  749  uniq -c out.xxx
+  750  ll /tmp/*.b64
+  751  uniq -c out.xxx|wc -l
+  752  ll /tmp/*.b64|wc -l
+  753  cat /tmp/*.b64
+  754  cd ..
+  755  history
+  756  git diff
+  757  git status
+  758  git status|more
+  759  git add PEAR art dna-fountain
+  760  git status
+  761  git add dnacodec wgsim zfec
+  762  cd wgsim
+  763  rm all* out*
+  764  rm wgsim
+  765  cd ..
+  766  git add dnacodec wgsim zfec
+  767  git commit -am 'dnacodec'
+  768  git push origin master
+  769  pwd
+  770  git pull
+  771  ls
+  772  ls
+  773  vi dnacodec/main.go 
+  774  history
+  775  less /tmp/ll
+  776  ls
+  777  cd wgsim
+  778  ls
+  779  cd ..
+  780  ls */out*
+  781  cd wgsim
+  782  dnacodec -receive -input out.good -output out.xxx 
+  783  ls
+  784  cd ..
+  785  history > hist.txt

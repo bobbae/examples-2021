@@ -1,0 +1,42 @@
+syntax = "proto3";
+package api;
+
+import "google/api/annotations.proto";
+
+service Kuberp {
+    rpc Echo(EchoRequest) returns (EchoResponse) {
+        option (google.api.http) = {
+            post: "/echo",
+            body: "*"
+        };
+    }
+
+    rpc Proxy(ProxyRequest) returns (ProxyResponse) {
+    	option (google.api.http) = {
+	       post: "/v1/proxy",
+	       body: "*"
+       };
+    }
+}
+
+message EchoRequest {
+    string message = 1;
+}
+
+message EchoResponse {
+    string message = 1;
+}
+
+	
+message ProxyRequest {
+	string message = 1;
+	string kind = 2;
+	string name = 3;
+	string path = 4;
+	string origin = 5;
+}
+
+message ProxyResponse {
+	string message = 1;
+	string status = 2;
+}
