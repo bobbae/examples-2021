@@ -3,7 +3,21 @@
 """
 
 # If running from cloud-shell, DEVSHELL_PROJECT_ID environment variable may contain project ID.
-# import os
+import os
+import sys
+
+project_id = os.getenv("GOOGLE_CLOUD_PROJECT")
+service_account = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+
+if project_id == None :
+    sys.exit("GOOGLE_CLOUD_PROJECT env var not set")
+
+if service_account == None :
+    sys.exit("GOOGLE_APPLICATION_CREDENTIALS env var not set")
+
+print('project_id',project_id)
+print('service_account',service_account)
+
 # project_id = os.getenv("DEVSHELL_PROJECT_ID")
 
 # Otherwise, set project_id manually
@@ -13,7 +27,6 @@
 #auth.authenticate_user()
 #print('Authenticated')
 
-project_id = 'project-abc-12345'
 
 """### BigQuery and dataframe"""
 
