@@ -1,0 +1,127 @@
+.ReactModal__Content {
+  /* width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh; */
+  padding: 0 !important;
+  overflow: auto;
+  width: 100vw;
+  inset: 40px 0 0 0 !important;
+  border-radius: 10px !important;
+  border-top: 1px solid #eee !important;
+}
+
+.ReactModal__Overlay {
+  z-index: 4;
+}
+
+.isp-modal-main {
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+  overflow: auto;
+}
+
+.isp-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+}
+
+.isp-modal-main-label {
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  color: #444444;
+}
+
+.isp-modal-cancel-label {
+  font-weight: 500;
+  font-size: 17px;
+  color: #5F72FF;
+  cursor: pointer;
+}
+
+.isp-modal-save-label {
+  font-weight: 600;
+  font-size: 17px;
+  color: #5F72FF;
+  cursor: pointer;
+}
+
+.isp-modal-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 0 20px 0 20px;
+  height: 42px;
+  margin-bottom: 20px;
+}
+
+.isp-modal-row-label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #444444;
+}
+
+.isp-modal-row-value {
+  font-weight: 500;
+  font-size: 15px;
+  color: #5F72FF;
+}
+
+.isp-modal-long-value .isp-modal-row-label {
+  width: 250px;
+}
+
+.isp-modal-long-value .isp-modal-row-value {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.isp-modal-row-value p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.isp-modal-body {
+  padding: 30px 15px 30px 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+
+.isp-modal-row-multi {
+  margin-bottom: 20px;
+}
+
+.isp-modal-row-multi .isp-modal-row {
+  border-radius: 0;
+  border-bottom: 0;
+  margin: 0;
+}
+
+.isp-modal-row-multi .isp-modal-row:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.isp-modal-row-multi .isp-modal-row:last-of-type {
+  border-bottom: 1px solid #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

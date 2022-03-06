@@ -1,0 +1,55 @@
+.ui-subscribers-menu a {
+  text-decoration: none;
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ui-subscribers-menu-label {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #444444;
+}
+
+.ui-subscribers-menu-text {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #777777;
+}
+
+.ui-subscribers-menu-text-active {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #6EE294;
+}
+
+.ui-subscribers-menu-text-blue {
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -0.16px;
+  color: #5F72FF;
+}
+
+.ui-subscribers-details-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ui-details-image-wrapper {
+  display: flex;
+  margin-left: 12px;
+}
+
+.ui-details-arrow {
+  width: 10px;
+  height: 15px;
+}
+
+.ui-menu-adress-container {
+  text-align: right;
+}

@@ -1,0 +1,49 @@
+.ui-support-info a {
+  text-decoration: none;
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ui-support-info-label {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #444444;
+}
+
+.ui-support-info-hide {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #5F72FF;
+}
+
+.ui-support-info-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #666;
+  line-height: 22px;
+}
+
+.ui-support-share-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ui-support-share-label {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #5F72FF;
+  margin-left: 4px;
+}
+
+.ui-support-share-icon {
+  width: 13px;
+  height: 13px;
+}

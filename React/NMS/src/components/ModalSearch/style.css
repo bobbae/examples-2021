@@ -1,0 +1,100 @@
+.modal-search-wrapper {
+  width: 375px;
+  background: #fff;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.modal-search-body {
+  height: 100%;
+  max-height: calc(100vh - 90px);
+  overflow: auto;
+}
+
+.modal-search-list-item {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.modal-search-list li:last-of-type .modal-search-list-item {
+  border-bottom: none;
+}
+
+.modal-search-name-status-container {
+  width: 75%;
+}
+
+.modal-search-label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #444;
+}
+
+.modal-search-label p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.modal-search-status-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.modal-search-status-field {
+  padding-left: 8px;
+  padding-right: 8px;
+  width: fit-content;
+  height: 14px;
+  margin-right: 9px;
+  border-radius: 40px;
+  font-size: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.active-field {
+  color: #fff;
+  background: #6ee294;
+  border: 1px solid #6ee294;
+}
+
+.vip-clients-field {
+  color: #94beec;
+  background: #fff;
+  border: 1px solid #d0cdcd;
+}
+
+.more-field {
+  color: #aba8a8;
+  background: #fff;
+  border: 1px solid #d0cdcd;
+}
+
+.modal-search-bars-smiley-container {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-search-bars-container {
+  width: 75%;
+}
+
+.modal-search-smiley {
+  font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
+}

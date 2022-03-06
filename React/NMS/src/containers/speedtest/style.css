@@ -1,0 +1,12 @@
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-speedtest-wrapper {
+  padding: 25px 20px 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

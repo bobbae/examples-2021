@@ -1,0 +1,24 @@
+.subscribers-header-container {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 16px 0 16px;
+  height: fit-content;
+}
+
+.subscribers-header-label-icons {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subscribers-header-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subscribers-header-label {
+  color: #444;
+  font-weight: 600;
+  font-size: 17px;
+}

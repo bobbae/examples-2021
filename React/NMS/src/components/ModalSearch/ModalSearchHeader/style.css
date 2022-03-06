@@ -1,0 +1,34 @@
+.modal-search-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+  height: 45px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+}
+
+.modal-search-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal-search-button-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.modal-search-button-image {
+  height: 21px;
+  width: 28px;
+}
+
+.modal-search-button-text {
+  font-weight: 600;
+  font-size: 17px;
+  color: #5F72FF;
+}

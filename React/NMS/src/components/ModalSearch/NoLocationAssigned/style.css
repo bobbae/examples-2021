@@ -1,0 +1,24 @@
+.modal-search-no-location-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5px;
+}
+
+.no-location-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.no-location-image {
+  width: 12px;
+  height: 12px;
+}
+
+.no-location-text {
+  font-weight: 600;
+  font-size: 10px;
+  color: #777;
+}

@@ -1,0 +1,25 @@
+.ui-router-traffic-wrapper {
+  display: flex;
+}
+
+@media only screen and (max-width: 1230px) {
+  .lan-mobile-view .traffic-column {
+    width: 100% !important;
+    border-right: none;
+  }
+  .lan-mobile-view .lan-device-column {
+    display: none;
+  }
+  .lan-mobile-view .service-column-full {
+    display: none;
+  }
+  .lan-mobile-view .service-column-third {
+    display: none;
+  }
+}
+
+.router-traffic-item-hover:hover {
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}

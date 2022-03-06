@@ -1,0 +1,12 @@
+.ui-top-content-search {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 16px 0 16px;
+  height: fit-content;
+}
+
+.ui-top-header-search {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

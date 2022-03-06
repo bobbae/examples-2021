@@ -1,0 +1,118 @@
+.ReactModal__Content {
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 !important;
+  height: 80vh;
+  overflow: auto;
+}
+
+.ReactModal__Overlay {
+  z-index: 4;
+}
+
+.modal-main {
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+  overflow: auto;
+}
+
+.ui-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.ui-modal-main-label {
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #444444;
+}
+
+.ui-modal-cancel-label {
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -0.24px;
+  color: #5F72FF;
+}
+
+.ui-modal-save-label {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.24px;
+  color: #5F72FF;
+}
+
+.ui-modal-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 0 10px 0;
+}
+
+.ui-modal-row-label {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #444444;
+}
+
+.ui-modal-row-value {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #5F72FF;
+}
+
+.ui-modal-body {
+  padding: 30px 15px 30px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-modal-row-multi .ui-modal-row {
+  border-radius: 0;
+  border-bottom: 0;
+  margin: 0;
+}
+
+.ui-modal-row-multi .ui-modal-row:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 10px;
+}
+
+.ui-modal-row-multi .ui-modal-row:last-of-type {
+  border-bottom: 1px solid #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.ui-modal-row-with-heading {
+  margin-top: 10px;
+}
+
+.ui-modal-row-heading {
+  margin-left: 15px;
+  text-align: left;
+  color: #777777;
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: block;
+}
+
+

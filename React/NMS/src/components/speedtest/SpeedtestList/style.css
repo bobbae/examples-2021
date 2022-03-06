@@ -1,0 +1,200 @@
+.ui-speedtest-network-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 0 20px 0 20px;
+  height: 40px;
+}
+
+.ui-speedtest-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 6px 20px 6px 20px;
+}
+
+.ui-speedtest-network-name {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444;
+}
+
+.ui-speedtest-network-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info-download-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.info-upload-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.info-cap-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.info-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-image {
+  width: 16px;
+  height: 16px;
+  margin-right: 3px;
+}
+
+.info-text {
+  color: #777;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/**/
+
+.ui-list-agent-note {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+}
+
+.agent-note-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agent-note-image {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+.agent-note-text {
+  font-size: 10px;
+  color: #777;
+  font-weight: 600;
+}
+
+/**/
+
+.ui-speedtest-date {
+  color: #444;
+  font-weight: 600;
+  font-size: 15px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+}
+
+.ui-speedtest-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 29px;
+}
+
+.ui-new-box {
+  width: 45px;
+  height: 18px;
+  background: #00C981;
+  color: #fff;
+  font-weight: 700;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.ui-speedtest-time {
+  font-weight: 500;
+  font-size: 15px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.ui-speedtest-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.ui-speedtest-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.ui-speedtest-progress-green {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.ui-speedtest-progress-blue {
+  width: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.ui-speedtest-progress-meter {
+  height: 8px;
+  background: #fff;
+  border-radius: 100px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 2;
+}
+
+.ui-speedtest-green-fill {
+  height: 100%;
+    border-radius: 20px;
+    background-color: #6EE294;
+}
+
+.ui-speedtest-blue-fill {
+  height: 100%;
+    border-radius: 20px;
+    background-color: #5F72FF;
+}
+
+.ui-multi-list li {
+  border-radius: 0;
+  border-bottom: 0;
+}
+
+.ui-multi-list li:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ui-multi-list li:last-of-type {
+  border-bottom: 1px solid #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

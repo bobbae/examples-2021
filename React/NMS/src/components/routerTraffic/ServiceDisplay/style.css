@@ -1,0 +1,149 @@
+.service-column-full {
+  height: 100vh;
+  width: 66.66%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .service-column-full-inner {
+  max-width: 450px;
+} */
+
+.service-image-label-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.service-image-container {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.service-image {
+  
+}
+
+.service-label {
+  color: #444;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.service-box {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 25px;
+}
+
+.service-gray-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #777;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.reveal-data-text {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444;
+  text-align: center;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.request-lan-button {
+  background: #eee;
+  border-radius: 10px;
+  color: #5F72FF;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 12px 20px 12px 20px;
+  text-align: center;
+}
+
+.ask-customer-label {
+  font-size: 10px;
+  font-weight: 400;
+  color: #777;
+  margin-top: 5px;
+}
+
+.service-list {
+  margin-top: 20px;
+}
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #eee;
+  border-bottom: none;
+  padding: 12px 20px 12px 20px;
+}
+
+.service-list li:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.service-list li:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.service-list-item {
+  color: #444;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.service-list-item-value {
+  color: #777;
+  font-weight: 500;
+  font-size: 15px;
+}
+/**/
+.service-column-third {
+  width: 33.33%;
+    border-left: 1px solid #ddd;
+}
+
+.service-column-third .service-image-label-container {
+  padding-left: 20px;
+  padding-top: 25px;
+}
+
+.service-column-third .service-gray-label {
+  padding-left: 20px;
+}
+
+.service-column-third .service-box {
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.service-column-third .service-access-data-box {
+  display: none;
+}
+
+.service-column-third .service-list li {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}

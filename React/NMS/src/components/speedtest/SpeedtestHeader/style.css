@@ -1,0 +1,29 @@
+.ui-speedtest-header {
+  padding: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 0px #EEEEEE;
+}
+
+.ui-speedtest-main-label {
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #444444;
+}
+
+.ui-speedtest-back-label {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.24px;
+  color: #5F72FF;
+}
+
+.ui-speedtest-new-label {
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -0.24px;
+  color: #5F72FF;
+}

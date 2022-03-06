@@ -1,0 +1,18 @@
+.maintenance-add-new-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.maintenance-add-new-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.maintenance-add-new-button-image {
+  width: 25px;
+  height: 25px;
+}

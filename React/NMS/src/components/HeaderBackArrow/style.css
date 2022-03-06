@@ -1,0 +1,29 @@
+.header-back-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-back-arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.header-back-arrow {
+  height: 18px;
+  width: 13px;
+}
+
+.header-back-label {
+  font-weight: 500;
+  font-size: 17px;
+  color: #5F72FF;
+}
+
+.header-back-label-bold {
+  font-weight: 600;
+  font-size: 17px;
+  color: #5F72FF;
+}

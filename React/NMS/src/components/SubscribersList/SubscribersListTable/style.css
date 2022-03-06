@@ -1,0 +1,211 @@
+th div.ascending::after {
+  content: '';
+  background: url(../../../assets/images/switch-arrow.png);
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+th div.descending::after {
+  content: '';
+  background: url(../../../assets/images/switch-arrow.png);
+  transform: rotate(180deg);
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* Frozen first column */
+
+.table-container table th:first-child {
+  position: sticky;
+  z-index: 4;
+  left: 0;
+}
+
+.table-container table td:first-of-type {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+
+/* Column min-width */
+
+.table-container td {
+  min-width: 100px;
+}
+
+.table-container table {
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+.table-container td {
+  white-space: nowrap;
+  padding: 13px 16px 13px 0;
+  background: #fff;
+}
+
+.table-container table td:first-of-type {
+  padding-left: 16px;
+}
+
+.table-container th {
+  text-align: left;
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  height: 50px;
+  z-index: 2;
+}
+
+.table-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  position: relative;
+  max-height: calc(100vh - 136px);
+  max-width: fit-content;
+}
+
+.ui-network-labels p {
+  font-weight: 600;
+  font-size: 13px;
+  color: #5F72FF;
+  cursor: pointer;
+}
+
+.table-without-heading-row td {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-without-heading-row td:first-of-type {
+  border-left: 1px solid #f0f0f0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table-without-heading-row td:last-of-type {
+  border-right: 1px solid #f0f0f0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.table-without-heading .table-without-heading-row td {
+  border-radius: 0;
+  border-bottom: 0;
+}
+
+.table-without-heading tr:nth-of-type(2) td:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+.table-without-heading tr:nth-of-type(2) td:last-of-type {
+  border-top-right-radius: 10px;
+}
+
+.table-without-heading tr:last-of-type td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-without-heading tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+
+.table-without-heading tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}
+
+.ui-network-status-container {
+  display: flex;
+  align-items: center;
+}
+
+.ui-network-label-container {
+  margin: 5px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+}
+
+.ui-network-status {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  max-width: 400px;
+  overflow: auto;
+}
+
+.ui-active-field {
+  padding-left: 8px;
+  padding-right: 8px;
+  width: fit-content;
+  height: 14px;
+  background: #6ee294;
+  border: 1px solid #6ee294;
+  margin-right: 9px;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-vip-clients-field {
+  padding-left: 7px;
+  padding-right: 7px;
+  width: fit-content;
+  height: 13px;
+  background: #fff;
+  border: 1px solid #d0cdcd;
+  margin-right: 9px;
+  color: #94beec;
+  border-radius: 40px;
+  font-size: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-more-field {
+  padding-left: 7px;
+  padding-right: 7px;
+  width: fit-content;
+  height: 13px;
+  background: #fff;
+  border: 1px solid #d0cdcd;
+  margin-right: 9px;
+  color: #aba8a8;
+  border-radius: 40px;
+  font-size: 8px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribers-basic-row-item {
+  font-weight: 500;
+  font-size: 15px;
+  color: #777777;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subscribers-basic-row-item p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

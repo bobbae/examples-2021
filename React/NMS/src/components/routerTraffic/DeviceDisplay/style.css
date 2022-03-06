@@ -1,0 +1,138 @@
+.lan-device-column {
+  width: 33.33%;
+  padding-top: 20px;
+}
+
+.lan-device-list li {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-top: 1px solid #eee;
+}
+
+.lan-device-list li:last-of-type {
+  border-bottom: 1px solid #eee;
+}
+
+.lan-device-list-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px 15px 20px;
+  transition: background 0.15s ease-in;
+}
+
+.lan-device-list-main:hover {
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lan-device-list-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+
+.lan-device-list-arrow-image-container {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lan-device-list-arrow-image {
+  width: 15px;
+  height: 5px;
+}
+
+.lan-device-list li {
+  transition: margin 0.2s ease-in-out;
+}
+
+.lan-device-list-active-dropdown {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.lan-device-list-service-dropdown .lan-dropdown-list-item-inner {
+  padding-right: 55px;
+}
+
+.lan-device-list-service-dropdown .router-traffic-list-image-label-wrapper {
+  min-width: 120px;
+  margin-right: 5px;
+}
+
+.lan-device-list-service-dropdown li{
+  border: none !important;
+  transition: background 0.15s ease-in;
+}
+
+/* .lan-device-list-service-dropdown li:hover {
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.2s ease;
+} */
+
+.lan-dropdown-list-item-inner {
+  padding: 12px 40px 12px 0px;
+  margin-left: 60px;
+  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.lan-device-list-service-dropdown li:first-of-type .lan-dropdown-list-item-inner {
+  border-top: 1px solid #eee !important;
+}
+
+.lan-dropdown-image-wrapper {
+  border-radius: 50%;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.lan-dropdown-image {
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.lan-dropdown-label {
+  color: #777;
+  font-weight: 500;
+  font-size: 13px;
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 65%;
+}
+
+.lan-dropdown-label p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dropdown-hidden {
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.dropdown-visible {
+  visibility: visible;
+  max-height: 600px;
+  transition: all 0.7s ease-in;
+  overflow: hidden;
+}

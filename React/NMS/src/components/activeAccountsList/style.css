@@ -1,0 +1,82 @@
+.ui-account-list-label {
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: 0.175px;
+  color: #444444;
+}
+
+.ui-account-list {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.ui-account-image-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #D5D5D5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.ui-account-list-blue {
+  font-weight: 500;
+  font-size: 15px;
+  text-align: right;
+  letter-spacing: -0.16px;
+  color: #5F72FF;
+}
+
+.ui-account-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 12px 20px 12px 20px;
+}
+
+.ui-account-profile-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ui-list-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ui-list-account-name {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #444444;
+}
+
+.ui-list-account-text {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: -0.06px;
+  color: #777777;
+}
+
+.ui-multi-list li {
+  border-radius: 0;
+  border-bottom: 0;
+}
+
+.ui-multi-list li:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ui-multi-list li:last-of-type {
+  border-bottom: 1px solid #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

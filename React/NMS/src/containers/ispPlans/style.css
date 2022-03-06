@@ -1,0 +1,110 @@
+.ui-isp-plans-wrapper {
+  padding: 20px;
+}
+
+.isp-plans-list li .isp-plans-list-item {
+  border-radius: 0;
+  border-bottom: 0;
+}
+
+.isp-plans-list li:first-of-type .isp-plans-list-item {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.isp-plans-list li:last-of-type .isp-plans-list-item {
+  border-bottom: 1px solid #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.isp-plans-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 13px 20px 13px 20px;
+}
+
+.isp-label-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.isp-label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #444;
+}
+
+.isp-networks {
+  margin-right: 10px;
+}
+
+.isp-info {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.isp-download {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.isp-upload {
+  display: flex;
+  align-items: center;
+}
+
+.isp-upload-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isp-download-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isp-upload-image {
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+}
+
+.isp-download-image {
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+}
+
+.isp-networks, .isp-download-value, .isp-upload-value {
+  font-weight: 600;
+  font-size: 10px;
+  color: #777;
+}
+
+.isp-actions-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isp-actions-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ReactModal__Content {
+  padding: 0 !important;
+}

@@ -1,0 +1,117 @@
+.ui-icon-box {
+  width: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  margin: 8px;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  padding: 18px 0 0 19px;
+  height: 115px;
+}
+
+.ui-box-image-label-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-box-image-wrapper {
+  width: 26px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ui-box-icon {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.ui-icon-box-label {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+.ui-icon-box-text {
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.12px;
+  color: #777777;
+}
+
+.ui-dropdown-arrow {
+  display: none;
+}
+
+@media only screen and (max-width: 1351px) {
+  .ui-top-boxes {
+    margin: 16px 16px 8px 16px;
+    padding: 0;
+    display: block;
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    border: 0;
+  }
+  .ui-icon-box {
+    padding: 10px 16px 10px 16px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    height: unset;
+  }
+  .ui-icon-box:not(:last-of-type) {
+    border-bottom: 0;
+  }
+  .ui-icon-box:first-of-type {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .ui-icon-box:last-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .ui-box-image-label-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .ui-box-image-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    width: unset;
+    height: unset;
+  }
+  .ui-box-icon {
+    max-width: 15px;
+    max-height: 15px;
+  }
+  .ui-icon-box-label {
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+  .ui-icon-box-text {
+    display: none;
+  }
+  .ui-dropdown-arrow {
+    display: block;
+  }
+}

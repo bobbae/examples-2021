@@ -1,0 +1,116 @@
+.traffic-column {
+  width: 33.33%;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+}
+
+.router-traffic-gray-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #777;
+  padding-left: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.router-traffic-speed-container {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  padding: 15px 20px 15px 20px;
+}
+
+.router-traffic-list li {
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.15s ease-in;
+}
+
+.router-traffic-list li:last-of-type {
+  border-bottom: 1px solid #eee;
+}
+
+.router-traffic-list-image-label-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 4;
+  min-width: 165px;
+}
+
+.router-traffic-list-image-wrapper {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.router-traffic-list-image {
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.router-traffic-list-label {
+  font-weight: 600;
+  color: #444;
+  font-weight: 600;
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 75%;
+}
+
+.router-traffic-list-label p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.router-graph-arrow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.router-graph {
+  margin-right: 20px;
+}
+
+.router-arrow-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.router-arrow-image {
+  width: 9px;
+  height: 14px;
+}
+
+.lan-responsive-active {
+  margin: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+.lan-responsive-active .lan-device-list-main {
+  padding-right: 9px;
+  transition: all 0.5s ease;
+}
+
+.lan-dropdown-mobile-border {
+  border-top: 1px solid #eee !important;
+  padding-right: 44px;
+}

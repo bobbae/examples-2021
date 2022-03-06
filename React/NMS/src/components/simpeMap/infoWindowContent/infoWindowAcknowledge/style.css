@@ -1,0 +1,153 @@
+.ui-acknowledge-pseudo-flex {
+  width: 70px;
+}
+
+.ui-acknowledge-back {
+  display: flex;
+  align-items: center;
+}
+
+.ui-acknowledge-window-back-label {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+  color: #5F72FF;
+  cursor: pointer;
+}
+
+.ui-back-arrow {
+  margin-top: 2px;
+  height: 18px;
+  width: 14px;
+}
+
+/* Acknowledge row */
+
+.ui-acknowledge-window-row {
+  background: #ffffff;
+  box-shadow: 0px 1px 0px #EEEEEE, inset 0px 1px 0px #EEEEEE;
+}
+
+.ui-acknowledge-window-row a {
+  text-decoration: none;
+  padding: 0 25px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 42px;
+}
+
+.acknowledge-row-label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444444;
+  letter-spacing: 0.4px;
+}
+
+.acknowledge-row-value-text {
+  font-weight: 500;
+  font-size: 17px;
+  color: #5F72FF;
+}
+
+.acknowledge-value-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.acknowledge-value-image-wrapper {
+  display: flex;
+  margin-left: 20px;
+}
+
+.acknowledge-details-arrow {
+  width: 10px;
+  height: 15px;
+}
+
+/* Notes row */
+
+.ui-info-window-notes-row {
+  margin-top: 30px;
+}
+
+.notes-items {
+  background: #ffffff;
+  box-shadow: 0px 1px 0px #EEEEEE, inset 0px 1px 0px #EEEEEE;
+}
+
+.notes-items a {
+  text-decoration: none;
+  padding: 12px 25px 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notes-items-row {
+  border-bottom: 1px solid #eeeeee;
+  margin-left: 25px;
+}
+
+.notes-items-row:last-of-type {
+  border-bottom: 0;
+}
+
+.notes-items-label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444444;
+  letter-spacing: 0.4px;
+}
+
+.notes-items-note-label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #777777;
+}
+
+.notes-items-gray-text {
+  font-weight: 500;
+  font-size: 15px;
+  color: #979797;
+}
+
+/* Acknowledge inactivity row */
+
+.ui-info-window-inactivity-row {
+  margin-top: 30px;
+}
+
+.inactivity-items {
+  background: #ffffff;
+  box-shadow: 0px 1px 0px #EEEEEE, inset 0px 1px 0px #EEEEEE;
+}
+
+.inactivity-items a {
+  text-decoration: none;
+  padding: 12px 25px 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inactivity-items-row {
+  border-bottom: 1px solid #eeeeee;
+  padding-left: 25px;
+}
+
+.inactivity-items-row:last-of-type {
+  border-bottom: 0;
+}
+
+.inactivity-check-image {
+  width: 16px;
+  height: 17px;
+}
+
+.inactivity-items-label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444444;
+  letter-spacing: 0.6px;
+}

@@ -1,0 +1,75 @@
+.ui-router-traffic-header {
+  padding: 0 21px 0 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 0px #EEEEEE;
+  height: 62px;
+  position: relative;
+}
+
+.ui-router-traffic-main-label {
+  font-weight: 600;
+  font-size: 17px;
+  color: #444444;
+  position: absolute;
+  left: calc(50% - 25px);
+}
+
+.ui-router-traffic-back-label {
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -0.24px;
+  color: #5F72FF;
+}
+
+.ui-router-traffic-request-lan-label {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.24px;
+  color: #5F72FF;
+  cursor: pointer;
+}
+
+.ui-cancel-lan-request {
+  width: 160px;
+  height: 35px;
+  background-color: #5F72FF;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+
+}
+
+.ui-stop-lan {
+  width: 180px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF3563;
+  border-radius: 200px;
+  cursor: pointer;
+}
+
+.stop-lan-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.stop-lan-icon {
+  height: 19px;
+}
+
+.stop-lan-label {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}

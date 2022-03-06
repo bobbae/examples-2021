@@ -1,0 +1,12 @@
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ui-account-wrapper {
+    padding-top: 45px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}

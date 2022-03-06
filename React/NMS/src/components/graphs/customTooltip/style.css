@@ -1,0 +1,106 @@
+.recharts-tooltip-wrapper {
+  left: -120px !important;
+  z-index: 10;
+}
+
+.recharts-tooltip-wrapper-contain {
+  left: -200px !important;
+}
+
+.recharts-tooltip-wrapper-contain .ui-tooltip-line {
+  left: 189px
+}
+
+.custom-tooltip {
+  background: black;
+  width: 200px;
+  border-radius: 10px;
+  color: white;
+  left: -100px;
+  padding: 8px 11px 8px 11px;
+}
+
+.ui-tooltip-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  transition: 4s all ease; 
+}
+
+.ui-tooltip-values {
+  display: flex;
+}
+
+.ui-tooltip-label {
+  color: #929292;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.ui-tooltip-green {
+  color: #6EE294;
+  font-size: 10px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.ui-tooltip-blue {
+  color: #5F72FF;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.ui-tooltip-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ui-tooltip-image-wrapper {
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.ui-tooltip-image {
+  width: 26px;
+  height: 26px;
+}
+
+.ui-tooltip-row-label {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  overflow: hidden;
+  width: 170px;
+}
+
+.ui-tooltip-row-label p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-tooltip-line {
+  width: 1px;
+  height: 165px;
+  position: absolute;
+  background: black;
+  left: 109px;
+}
+
+.ui-tooltip-line-bottom {
+  width: 22px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 162px;
+  left: -11px;
+  border-radius: 1px;
+}

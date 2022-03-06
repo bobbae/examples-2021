@@ -1,0 +1,349 @@
+.info-window-main {
+  width: 320px;
+  height: 575px;
+  background: #fafafa;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  position: relative;
+  bottom: 309px;
+  left: 52px;
+}
+
+.info-window-main::after {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  content: '';
+  transform: rotate(45deg);
+  margin-top: -8px;
+  background: #ffffff;
+  z-index: 1;
+  border: 1px solid #f5eeee;
+  border-top: 0;
+  border-right: 0;
+  top: 50%;
+  left: 0;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+
+.ui-info-window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 60px;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ui-pseudo-flex {
+  width: 40px;
+}
+
+.ui-info-window-main-label {
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #444444;
+  flex: 1;
+}
+
+.ui-info-window-done-label {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+  color: #5F72FF;
+}
+
+.ui-info-window-body {
+  padding: 25px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-info-window-row-label {
+  font-weight: 600;
+  font-size: 10px;
+  padding-left: 25px;
+  color: #777777;
+  margin-bottom: 5px;
+}
+
+/* Router row */
+
+.ui-info-window-router-row {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.router-image-container {
+  border-radius: 50%;
+  border: 3px solid #646464;
+  margin-right: 15px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+}
+
+.router-image {
+  width: 22px;
+  height: 23px;
+}
+
+.router-label-container {
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 5px;
+  color: #444444;
+}
+
+.router-status {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.router-active-field {
+  padding-left: 9px;
+  padding-right: 9px;
+  width: fit-content;
+  height: 16px;
+  background: #6ee294;
+  border: 1px solid #6ee294;
+  margin-right: 9px;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**/
+
+.ui-info-window-traffic-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 25px;
+}
+
+.traffic-speed-container {
+  background: #ffffff;
+  padding-left: 25px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  width: -webkit-fill-available;
+  box-shadow: 0px 1px 0px #EEEEEE, inset 0px 1px 0px #EEEEEE;
+}
+
+.traffic-speed-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 275px;
+}
+
+.traffic-speed-value-container {
+  display: flex;
+  align-items: center;
+}
+
+.traffic-speed-arrow {
+  width: 10px;
+  height: 10px;
+}
+
+.traffic-speed-label-green {
+  font-weight: 600;
+  font-size: 10px;
+  color: #56B274;
+  letter-spacing: 0.12px;
+  margin-left: 4px;
+}
+
+.traffic-speed-label-blue {
+  font-weight: 600;
+  font-size: 10px;
+  color: #5F72FF;
+  letter-spacing: 0.12px;
+  margin-left: 4px;
+}
+
+.traffic-progress-gradient {
+  height: 15px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 32px;
+  display: flex;
+  overflow: hidden;
+  width: 200px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.traffic-progress-number-container {
+  width: 80%;
+  background: transparent;
+  font-weight: 600;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+}
+
+.traffic-gradient-green {
+  background: linear-gradient(to right, #d4f7df 33%, #a8eebf 33% 66%, #6ee294 66%);
+}
+
+.traffic-gradient-blue {
+  background: linear-gradient(to right, rgba(95, 114, 255, 0.3) 33%, rgba(95, 114, 255, 0.6) 33% 66%, rgba(95, 114, 255, 0.8) 66%);
+}
+
+.traffic-progress-background {
+  background: white;
+  width: 20%;
+}
+
+/* Health row */
+
+.ui-info-window-health-row {
+  margin-top: 30px;
+}
+
+.health-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  background: #ffffff;
+  padding-left: 25px;
+  box-shadow: 0px 1px 0px #EEEEEE, inset 0px 1px 0px #EEEEEE;
+}
+
+.health-smiley-bar {
+  display: flex;
+  align-items: center;
+}
+
+.health-smiley-image {
+  height: 28px;
+  margin-right: 8px;
+}
+
+.health-bar-green {
+  width: 3px;
+  height: 20px;
+  background: #6ee294;
+  border: 1px solid #6ee294;
+  border-radius: 5px;
+  margin: 0 2px 0 2px;
+}
+
+.health-bar-green-empty {
+  width: 3px;
+  height: 20px;
+  border: 1px solid #6ee294;
+  border-radius: 5px;
+  margin: 0 2px 0 2px;
+}
+
+/* Acknowledge row */
+
+.ui-info-window-acknowledge-row {
+  background: #ffffff;
+  margin-top: 20px;
+  box-shadow: 0px 1px 0px #EEEEEE, inset 0px 1px 0px #EEEEEE;
+}
+
+.ui-info-window-acknowledge-row a {
+  text-decoration: none;
+  padding: 12px 25px 12px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.acknowledge-row-label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444444;
+  letter-spacing: 0.4px;
+}
+
+.acknowledge-row-value-text {
+  font-weight: 500;
+  font-size: 17px;
+  color: #5F72FF;
+}
+
+.acknowledge-value-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.acknowledge-value-image-wrapper {
+  display: flex;
+  margin-left: 20px;
+}
+
+.acknowledge-details-arrow {
+  width: 10px;
+  height: 15px;
+}
+
+/* Notes row */
+
+.ui-info-window-notes-row {
+  margin-top: 30px;
+}
+
+.notes-items {
+  background: #ffffff;
+  box-shadow: 0px 1px 0px #EEEEEE, inset 0px 1px 0px #EEEEEE;
+}
+
+.notes-items a {
+  text-decoration: none;
+  padding: 12px 25px 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notes-items-row {
+  border-bottom: 1px solid #eeeeee;
+  margin-left: 25px;
+}
+
+.notes-items-row:last-of-type {
+  border-bottom: 0;
+}
+
+.notes-items-label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444444;
+  letter-spacing: 0.4px;
+}
+
+.notes-items-gray-text {
+  font-weight: 500;
+  font-size: 15px;
+  color: #979797;
+}

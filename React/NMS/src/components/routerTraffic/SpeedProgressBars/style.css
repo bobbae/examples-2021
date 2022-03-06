@@ -1,0 +1,77 @@
+.traffic-progress-bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.progress-inner {
+  display: flex;
+  align-items: center;
+}
+
+.progress-value-container {
+  display: flex;
+  align-items: center;
+  width: 90px;
+}
+
+.progress-arrow {
+  width: 12px;
+  height: 12px;
+}
+
+.ui-speed-label-green {
+  font-weight: 600;
+  font-size: 10px;
+  color: #56B274;
+  letter-spacing: 0.12px;
+  margin-left: 4px;
+}
+
+.ui-speed-label-blue {
+  font-weight: 600;
+  font-size: 10px;
+  color: #5F72FF;
+  letter-spacing: 0.12px;
+  margin-left: 4px;
+}
+
+.router-traffic-progress-gradient {
+  height: 15px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 32px;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ui-progress-number-container {
+  width: 80%;
+  background: transparent;
+  font-weight: 600;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+}
+
+.ui-gradient-green {
+  background: linear-gradient(to right, #d4f7df 33%, #a8eebf 33% 66%, #6ee294 66%);
+}
+
+.ui-gradient-blue {
+  background: linear-gradient(to right, rgba(95, 114, 255, 0.3) 33%, rgba(95, 114, 255, 0.6) 33% 66%, rgba(95, 114, 255, 0.8) 66%);
+}
+
+.ui-progress-background {
+  background: white;
+  width: 20%;
+}
+
+@media only screen and (max-width:1351px) {
+  .ui-progress-box {
+    justify-content: space-between;
+  }
+}
