@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script> 
+  
+  <title>{{flask_token}}</title>
+
+</head>
+<body>
+    <div class="row d-flex pt-5 pb-5 justify-content-center ">
+        <h1>{{flask_token}}</h1>
+    </div>
+    <div class="row d-flex pt-5 pb-5 justify-content-center ">
+        <div class='col-sm-8'> 
+          <div class='row justify-content-center'>
+            <p>
+              <button type="button" class="btn btn-primary" id="getdata-btn" name="get data" value="get data">Get data</button>
+            </p>
+          </div>
+        </div>
+        <div class='col-sm-8'> 
+          <div class='row justify-content-center'>
+            <p><a href="http://publichealth.lacounty.gov/media/Coronavirus/locations.htm"> Data source - LA County Department of Public Health</a>
+          </div>
+          <div class='row justify-content-center'>
+            </p><br>
+            <p><a href="https://colab.research.google.com/github/bobbae/lacovid/blob/master/lacovid19.ipynb"> Jupyter Labs notebook on Google Colab</a>
+          </div>
+        </div>
+    </div>
+
+    <div class='container'>
+      <div class="row d-flex pt-5 pb-5 justify-content-center ">
+        <div class='col-sm-8' id="duration">
+          <div class="row d-flex pt-5 pb-5 justify-content-center ">
+              <svg style="height:560px;width:100%"></svg>
+          </div>
+          <div class='row justify-content-center'>
+            <p> blue: population, green: infected</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class='container'>
+      <div class="row d-flex pt-5 pb-5 justify-content-center ">
+        <div class='col-sm-8'> 
+          <div id='bar-chart'></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class='container'>
+      <div class="row d-flex justify-content-center">
+        <div class='col-sm-4'>
+          <table id="summary" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                  <tr>
+                      <th>Info</th>
+                      <th>Details</th>
+                  </tr>
+              </thead>
+              <tfoot>
+                  <tr>
+                      <th>Info</th>
+                      <th>Details</th>
+                  </tr>
+              </tfoot>
+          </table>
+        </div>
+        <div class='col-sm-8' id="duration">
+          <table id="example" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                  <tr>
+                      <th>City</th>
+                      <th>Cases</th>
+                      <th>Rate</th>
+                  </tr>
+              </thead>
+              <tfoot>
+                  <tr>
+                      <th>City</th>
+                      <th>Cases</th>
+                      <th>Rate</th>  
+                  </tr>
+              </tfoot>
+          </table>
+        </div>
+      </div>
+    </div> 
+
+    <script>
+
+   
+    function draw_bar_chart() {
+        $.ajax({
+            type: "GET",
+            url: "/get_results",
+            success: function(response){
+                cities = [];
+                cases = [];
+                for (i = 0; i < response.data.length; i++) {
+                    if (response.data[i].city.startsWith("Los Angeles - ")){
+                        if (response.data[i].cases === '--' ||
+                            response.data[i].cases === '0') {
+                            continue;
+                        }
+                        city = response.data[i].city.replace("Los Angeles - ", "");
+                        cities.push(city);
+                        cases.push(response.data[i].cases);
+                        continue;
+                    }
+                }
+                points = []
+                for (i = 0; i < cities.length; i++){
+                  points.push({ 'city': cities[i], 'cases': cases[i] } )
+                }
+                points.sort(function(a, b) { return (b.cases - a.cases)});
+                cities=[]
+                cases=[]
+                for (i = 0; i < 10; i++ ){
+                   cities[i] = points[i].city
+                   cases[i] = points[i].cases
+                }
+                var trace1 = {
+                type: 'bar',
+                x: cities,
+                y: cases,
+                marker: {
+                    color: '#C8A2C8',
+                    line: {
+                        width: 2.5
+                    }
+                }
+                };
+
+                var data = [ trace1 ];
+
+                var layout = { 
+                    title: 'Highest rates of infections',
+                    font: {size: 16}
+                };
+
+                var config = {responsive: true}
+
+                Plotly.newPlot('bar-chart', data, layout, config );
+            }
+        })
+    }
+
+    const button = document.getElementById('getdata-btn');
+    button.addEventListener('click', async _ => {
+        try {
+            const response = await fetch('/start_crawling', {
+                method: 'post',
+                body: {}
+            });
+            console.log('posted start crawl', response);
+        }catch(err) {
+            console.error(`Error: ${err}`);
+        }
+        window.location.reload();
+        draw_bar_chart();
+    });
+    function setupData(){
+        $(document).ready(function() {
+            $.ajax({type: "POST", url: "/start_crawling"});
+
+            $('#example').DataTable({
+                "ajax": {
+                    "url": "/get_results", 
+                    "dataType": "json",
+                    "dataSrc": "data",
+                    "contentType":"application/json"
+                },
+                "lengthMenu": [[10,50,100,200,300,400,-1], [10,50,100,200,300,400,"all"]],
+                "pageLength": 50,
+                "columns": [
+                    { "data": "city" },
+                    { "data": "cases" },
+                    { "data": "rate" }
+                ]
+                } );
+            } );
+
+            $('#summary').DataTable({
+                "ajax": {
+                    "url": "/get_summary",
+                    "dataType": "json",
+                    "dataSrc": "data",
+                    "contentType":"application/json"
+                },
+                "ordering": false,
+                "lengthMenu": [[10,50,100,200,300,400,-1], [10,50,100,200,300,400,"all"]],
+                "pageLength": 30,
+                "columns": [
+                    { "data": "info" },
+                    { "data": "details" }
+                ]
+                } );
+
+    }
+
+    function double_donut(result) {
+      data = result.data;
+       var dataset = {
+          apples: [{
+            value: 4644328,
+            color: '#1352A4',
+            label: 'latino'
+          }, {
+            value: 5126367,
+            color: '#5D9CEC',
+            label: 'white'
+          }, {
+            value: 844048,
+            color: '#1352A4',
+            label: 'black'
+          }, {
+            value: 1347782,
+            color: '#A4C7F4',
+            label: 'asian'
+          }
+          ],
+          oranges: [{
+            value: parseInt(data[20].details),
+            color: '#58A53B',
+            label: 'latino'
+          }, {
+            value: parseInt(data[22].details),
+            color: '#83C969',
+            label: 'white'
+          }, {
+            value: parseInt(data[19].details),
+            color: '#A8D996',
+            label: 'black'
+          }, {
+            value: parseInt(data[18].details),
+            color: '#CDE9C3',
+            label: 'asian'
+          }
+          ]
+        };
+
+      console.log(dataset);
+        var width = d3.select('#duration').node().offsetWidth,
+          height = 600,
+          cwidth = 33;
+
+        var pie = d3.layout.pie()
+          .sort(null)
+          .value(function(d) {
+            return d.value;
+          })
+
+        var innerArc = d3.svg.arc()
+          .innerRadius(158)
+          .outerRadius(cwidth * 1.7);
+
+        var outerArc = d3.svg.arc()
+          .innerRadius(220 + cwidth)
+          .outerRadius(cwidth * 4.5);
+
+        var svg = d3.select("#duration svg")
+          .append("g")
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        var gs = svg.selectAll("g").data(d3.values(dataset)).enter().append("g");
+        var en = gs.selectAll("path")
+          .data(function(d, i) {
+            return pie(d);
+          })
+          .enter();
+
+        en.append("path")
+          .attr("fill", function(d) {
+            return d.data.color;
+          })
+          .attr("d", function(d, i, j) {
+            return j === 0 ? innerArc(d) : outerArc(d);
+          });
+
+        en.append("text")
+          .text(function(d) {
+            return d.data.label;
+          })
+          .attr("transform", function(d, i, j) {
+            return j === 0 ? "translate(" + innerArc.centroid(d) + ")" : "translate(" + outerArc.centroid(d) + ")";
+          });
+    }
+
+    async function asyncSetup() {
+      $.ajax({type: "POST", url: "/start_crawling"});
+      let promise = new Promise((res,rej) => {
+        setTimeout(() => res("done"), 1000)
+      });
+      let result = await promise;
+      setupData();
+      $.ajax({url: "/get_summary", success: function(result) {
+        double_donut(result);
+      }});
+      draw_bar_chart();
+    };
+
+    $( window ).on( "load", asyncSetup );
+
+    //draw_bar_chart();
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+crochet==1.12.0
+Scrapy==1.8.0
+Flask==1.1.1
+gunicorn==20.0.4
