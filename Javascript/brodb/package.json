@@ -1,0 +1,31 @@
+{
+    "name"        : "brodb",
+    "version"     : "1.0.0",
+    "description" : "brogrammer db",
+    "author"      : "bobbae <bob.bae+gh@gmail.com>",
+    "dependencies": {
+        "express": "*",
+        "routes": "*",
+        "redis-protocol": "*",
+        "mkdirp": "*",
+        "minimist" : "*",
+        "node-lmdb": "*",
+        "redis":   ">=0.8"
+    },
+    "devDependencies": {
+        "nodeunit": ">=0.6"
+    },
+    "main"        : "brodb.js",
+    "keywords"    : ["db"],
+    "repositories": [{
+        "type": "git",
+        "path": "git://github.com/bobbae/brodb.git"
+    }],
+    "homepage"    : "http://github.com/bobbae/brodb",
+    "bugs"        : "http://github.com/bobbae/brodb/issues",
+    "licenses"    : [{ "type": "MIT"}],
+    "engine"      : "node",
+    "scripts"     : {
+        "test": "./node_modules/nodeunit/bin/nodeunit test/*"
+    }
+}
