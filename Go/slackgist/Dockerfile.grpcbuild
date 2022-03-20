@@ -1,0 +1,28 @@
+FROM ubuntu:latest 
+
+RUN apt-get update
+RUN apt-get install -y wget curl unzip  make git ssh 
+RUN cd /usr/local; wget --quiet https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
+RUN cd /usr/local; tar xf go1.10.3.linux-amd64.tar.gz
+RUN cd /usr/local; rm go1.10.3.linux-amd64.tar.gz
+RUN cd /usr/local; wget https://github.com/google/protobuf/releases/download/v3.6.0/protoc-3.6.0-linux-x86_64.zip
+RUN cd /usr/local; unzip protoc-3.6.0-linux-x86_64.zip
+RUN cd /usr/local; rm protoc-3.6.0-linux-x86_64.zip
+RUN mkdir -p /go/bin
+ENV GOROOT=/usr/local/go
+ENV GOPATH=/go
+ENV PATH=/go/bin:/usr/local/go/bin:${PATH}
+RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+RUN mv /go/bin/dep /usr/local/bin/
+RUN go get github.com/golang/protobuf; exit 0
+RUN go get -u github.com/grpc-ecosystem/grpc-gateway; exit 0
+RUN go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway; exit 0
+RUN go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger; exit 0
+RUN go get -u github.com/golang/protobuf/protoc-gen-go; exit 0
+RUN go get -u github.com/gogo/protobuf; exit 0
+RUN go install github.com/gogo/protobuf/protoc-gen-gogofast; exit 0
+RUN echo export GOROOT=/usr/local/go >> /root/.bashrc
+RUN echo export GOPATH=/go >> /root/.bashrc
+
+ENTRYPOINT [ "bash" ]
+CMD []

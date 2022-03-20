@@ -1,0 +1,4 @@
+FROM node:6.9.2
+EXPOSE 8080
+COPY server-v2.js .
+CMD node server-v2.js

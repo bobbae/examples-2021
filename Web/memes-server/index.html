@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MEMES SERVER</title>
+    <script defer src="./fonts/fontawesome-all.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body onload="init()">
+    <header>
+        <div class="container">
+            <a href="/">
+                <h1>MEMES SERVER</h1>
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <button class="button"  onclick="randomEdit()">
+            <i class="fas fa-random"></i> RANDOM IMAGE
+        </button>
+        
+        <button class="button" onclick="randomImgs()">
+            <i class="fas fa-random"></i>  RANDOM LIST
+        </button>
+        <button class="button" onclick="orderImgs()">
+            <i class="fas fa-fire"></i>  ORDERED LIST
+        </button>
+        <button class="button" onclick="likedImgs()">
+            <i class="fas fa-thumbs-up"></i>  FAVORITES
+        </button>
+        <!--
+        <button class="button"  onclick="toggleView()">
+            <i class="fas fa-times"></i>  TOGGLE VIEW
+        </button>
+        -->
+    </div>
+    <main>
+        <div>
+            <section class="gallery grid-container">
+                <!-- js render -->
+            </section>
+            <section class="meme-container hidden">
+                <div class="container">
+                    <!--
+                    <button class="button"  onclick="toggleView()">
+                        <i class="fas fa-times"></i> BACK TO GALLERY
+                    </button>
+                    -->
+                    <button class="button" onclick="like()">
+                        <i class="fas fa-thumbs-up"></i> LIKE
+                    </button>
+                    <!--
+                    <button class="button" onclick="newTxtBtnClicked()">
+                        <i class="fas fa-plus"></i>  Add Line
+                    </button>
+                    -->
+                    <button class="button" onclick="getDB()">
+                        <i class="fas fa-search"></i>  GET FROM DB
+                    </button>
+                    <button class="button" onclick="saveDB()">
+                        <i class="fas fa-plus"></i> SAVE TO DB
+                    </button>
+                    
+                    <a id="dl" class="button" download="meme.png" href="#" onclick="dlCanvas(this)">
+                        <span>
+                            <i class="fas fa-cloud-download-alt"></i> DOWNLOAD
+                        </span>
+                    </a>
+                    <button class="button" onclick="backup()">
+                        <i class="fas fa-archive"></i>  BACKUP
+                    </button>
+                </div>                 
+                <div class="meme-control">
+                    <canvas class="memeCanvas">
+                        Your browser does not support the HTML5 canvas tag.
+                    </canvas>
+
+                    <div class="txts-list">
+                        <!-- js render -->
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="contact">
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
+    <script src="js/images.js"></script>
+    <script src="js/meme.js"></script>
+    <script src="js/sha256.js"></script>
+    <script src="js/imgNames.js"></script>
+    <script src="js/cassandra.js"></script>
+    <script src="js/minio.js"></script>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

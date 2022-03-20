@@ -1,0 +1,10 @@
+builder error: 
+==================
+C error. This should never happen.
+
+If you were not working with C interop, this is a compiler bug, please report the bug using `v bug file.v`.
+
+https://github.com/vlang/v/issues/new/choose
+
+You can also use #help on Discord: https://discord.gg/vlang
+

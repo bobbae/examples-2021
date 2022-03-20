@@ -1,0 +1,53 @@
+syntax = "proto3";
+package api;
+
+import "google/api/annotations.proto";
+
+service Slackgist {
+    rpc Echo(EchoRequest) returns (EchoResponse) {
+        option (google.api.http) = {
+            post: "/v1/echo",
+            body: "*"
+        };
+    }
+    rpc Status(StatusRequest) returns (StatusResponse) {
+        option (google.api.http) = {
+            post: "/v1/status",
+            body: "*"
+        };
+    }
+    rpc Build(BuildRequest) returns (BuildResponse) {
+        option (google.api.http) = {
+            post: "/v1/build",
+            body: "*"
+        };
+    }    
+}
+
+message EchoRequest {
+    string message = 1;
+}
+
+message EchoResponse {
+    string message = 1;
+}
+
+message StatusRequest {
+    string message = 1;
+    string kind = 2;
+}
+
+message StatusResponse {
+    string message = 1;
+    string status = 2;
+}
+
+message BuildRequest {
+    string message = 1;
+    string options = 3;
+}
+
+message BuildResponse {
+    string message = 1;
+    string status = 2;
+}

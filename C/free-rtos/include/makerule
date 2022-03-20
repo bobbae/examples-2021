@@ -1,0 +1,38 @@
+#
+# $Revision: 1.1.1.1 $
+#
+
+.s.o:
+	$(CPP) -DASM_LANGUAGE $(INCLUDES) $(EXTRA) $(DEBUG) $*.s | \
+		$(AS) $(AFLAGS) -o $*.o
+
+.c.o:
+	$(CC) $(CFLAGS) $*.c -o $*.o
+
+lib:  $(SRC)/libobj/$(CPU)/$(LIB) 
+
+$(SRC)/libobj/$(CPU)/$(LIB):	$(LIBOBJS)
+	$(AR) -ruv $@ $(LIBOBJS)
+	$(RANLIB) $@
+
+$(SRC)/libobj/$(CPU)/$(CPU).a:
+	(cd $(SRC)/libobj/$(CPU) ; \
+	for i in *.a ; \
+	do \
+		$(AR) x $$i ; \
+	done ; \
+	$(AR) ruv $@ *.o ; \
+	rm *.o ; \
+	rm __.SYMDEF ; \
+	ranlib $@ )
+
+$(TOHEX):
+	@( cd $(SRC)/util; make tohex )
+
+depend:
+	$(CC) $(INCLUDES) $(DEPEND_FLAGS) *.c > Depend.out
+
+clean: 
+	/bin/rm *.o core *.a 
+
+include Depend.out

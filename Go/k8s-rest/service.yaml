@@ -1,0 +1,15 @@
+kind: Service
+metadata:
+  name: test-service-1
+  namespace: test-namespace-1
+  labels:
+    app: nginx
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    targetPort: http
+    protocol: TCP
+  selector:
+    app: nginx

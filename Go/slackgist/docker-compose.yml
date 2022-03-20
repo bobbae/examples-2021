@@ -1,0 +1,15 @@
+version: '3'
+services:
+  slackgist:
+    image: "bobbae/slackgist"
+    ports:
+     - "18732:18732"
+     - "18733:18733"
+     - "18734:18734"
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - ${HOME}/.ssh:/root/.ssh
+     - ${HOME}:/go
+    env_file:
+     - ${HOME}/slackgist.env
+    command: -owner bobbae -repo buildtest -dir /go/src/github.com/bobbae/buildtest -user bobbae -delay 10 -ql all -qo stdout -slack=false

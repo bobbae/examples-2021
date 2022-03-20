@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meme-server
+  labels:
+    name: meme-server
+spec:
+  containers:
+  - name: meme-server
+    image: gcr.io/$PROJECT/test1:meme-server-v1
+    command: [ "npm", "start" ]
+    envFrom:
+    - secretRef:
+        name: meme-server-secret

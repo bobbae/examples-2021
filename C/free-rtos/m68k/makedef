@@ -1,0 +1,27 @@
+#
+# $Revision: 1.1.1.1 $
+#
+
+#
+# change SRC to reflect the source directory
+#
+
+SRC=/home/hjb/free
+
+
+INCLUDES=-I. -I$(SRC)/include -I/usr/local/lib/gcc-lib/m68k/2.6.0/include/
+ARCH=m68k
+CPU=m68020
+CC=/usr/local/bin/m68k-gcc
+CPP=/usr/local/lib/gcc-lib/m68k/2.6.0/cpp
+CFLAGS= $(INCLUDES) \
+	-B/usr/local/bin/m68k- -O -g -m68020 \
+	-msoft-float -nostdinc -c
+EXTRA= -D$(CPU)
+
+RANLIB=/usr/local/bin/m68k-ranlib
+AS=/usr/local/bin/m68k-as
+LD=/usr/local/bin/m68k-ld
+AR=/usr/local/bin/m68k-ar
+DEPEND_FLAGS=-M $(INCLUDES) -m68020 -msoft-float
+TOHEX=$(SRC)/util/tohex
