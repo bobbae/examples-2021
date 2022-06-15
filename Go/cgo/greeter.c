@@ -9,3 +9,10 @@ int greet(const char *name, int year, char *out) {
     return n;
 }
 
+int greet2(struct Greetee *g, char *out) {
+    int n;
+
+    n = sprintf(out, "Greetings, %s from %d! We come in peace :)", g->name, g->year);
+
+    return n;
+}
