@@ -19,4 +19,4 @@ endif
 OBJ1=dumqtt.o mqtt.o mqtt_pal.o
 
 dumqtt: $(OBJ1)
-	gcc  $(CFLAGS) -o dumqtt$(EXE) $(OBJ1)  -lws2_32
+	gcc  $(CFLAGS) -o dumqtt$(EXE) $(OBJ1)  $(LIBS)
