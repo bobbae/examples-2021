@@ -108,6 +108,8 @@ int main(int argc, const char *argv[])
 		fprintf(stderr, "error: %s\n", mqtt_error_str(client.error));
 		exit(1);
 	}
+	char hostname[200];
+	gethostname(hostname, sizeof(hostname));
 	mqtt_subscribe(&client, topic, 0);
 	printf("%s is ready to begin publishing the time.\n", argv[0]);
 	for (;;) {
@@ -119,7 +121,7 @@ int main(int argc, const char *argv[])
 
 		char application_message[256];
 		snprintf(application_message, sizeof(application_message),
-			 "The time is %s", timebuf);
+			 "%s: The time is %s",hostname, timebuf);
 		printf("%s published : \"%s\"", argv[0], application_message);
 
 		mqtt_publish(&client, topic, application_message,
