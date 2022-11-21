@@ -11,21 +11,12 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netdb.h>
-#include <signal.h>
 #include <fcntl.h>
 #endif
 
 struct mqtt_client client;
 
 void publish_callback(void **unused, struct mqtt_response_publish *published);
-
-#ifdef LINUX
-void timer_callback(int signum)
-{
-	time_t now = time(NULL);
-	mqtt_sync(&client);
-}
-#endif
 
 int main(int argc, const char *argv[])
 {
@@ -104,8 +95,8 @@ int main(int argc, const char *argv[])
 	fcntl(sockfd, F_SETFL, fcntl(sockfd, F_GETFL) | O_NONBLOCK);
 #endif
 
-	uint8_t sendbuf[2048];	
-	uint8_t recvbuf[1024];	
+	uint8_t sendbuf[2048];
+	uint8_t recvbuf[1024];
 	mqtt_init(&client, sockfd, sendbuf, sizeof(sendbuf), recvbuf,
 		  sizeof(recvbuf), publish_callback);
 	const char *client_id = NULL;
@@ -117,13 +108,9 @@ int main(int argc, const char *argv[])
 		fprintf(stderr, "error: %s\n", mqtt_error_str(client.error));
 		exit(1);
 	}
-#ifdef LINUX
-	signal(SIGALRM,timer_callback);
-	alarm(1);
-#endif
 	mqtt_subscribe(&client, topic, 0);
 	printf("%s is ready to begin publishing the time.\n", argv[0]);
-	for(;;){
+	for (;;) {
 		time_t timer;
 		time(&timer);
 		struct tm *tm_info = localtime(&timer);
